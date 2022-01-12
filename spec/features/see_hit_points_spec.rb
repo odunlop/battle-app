@@ -8,6 +8,7 @@ feature "View hit point's" do
     sign_in_and_play
     click_button "Attack"
     click_button "Proceed"
+    expect(page).not_to have_content "Alex: 60HP"
     expect(page).to have_content "Alex: 50HP"
   end
 end

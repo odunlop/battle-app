@@ -1,1 +1,4 @@
-<%=@player_one%> attacked <%=@player_two%>
+<%=@game.player_one.name%> attacked <%=@game.player_two.name%>
+<form action="/play">
+  <input type="submit" value="Proceed">
+</form>

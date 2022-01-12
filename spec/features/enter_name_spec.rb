@@ -4,8 +4,6 @@ feature "enter names" do
     fill_in "Player One", with: "Orla"
     fill_in "Player Two", with: "Alex"
     click_button "Submit"
-    
-    save_and_open_page
 
     expect(page).to have_content "Orla vs Alex"
   end

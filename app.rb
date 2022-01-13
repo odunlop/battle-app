@@ -28,8 +28,12 @@ class Battle < Sinatra::Base
   get "/attack" do
     @game = $game
     @game.attack
-    @game.switch_turn
     erb(:attack)
+  end
+
+  post "/switch-turns" do
+    $game.switch_turn
+    redirect "/play"
   end
 
   # start the server if ruby file executed directly

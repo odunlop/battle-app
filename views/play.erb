@@ -1,7 +1,37 @@
-<h1><%=@game.player_one.name%> vs <%=@game.player_two.name%></h1>
-<%=@game.player_one.name%>: <%=@game.player_one.hitpoints%>HP <br>
-<%=@game.player_two.name%>: <%=@game.player_two.hitpoints%>HP <br>
-<%=@game.current_turn.name%>'s turn
-<form action="/attack">
-  <input type="submit" value="Attack">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <title> Battle! </title>
+        <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <div class="container">
+      <div class="menu">
+      <center>
+      <ul>
+        <li><h1><%=@game.player_one.name%> <font color="white";>vs</font> <font color="#00d123";><%=@game.player_two.name%></font></h1></li>
+      </ul>
+      </center>
+      </div>
+
+            <div class="player-two"><span>
+                <font color="#00d123";><%=@game.player_two.name%>: <%=@game.player_two.hitpoints%>HP </font></span>
+            </div>
+            <div class="player-one"><span>
+                <font color="#fd00da";><%=@game.player_one.name%>: <%=@game.player_one.hitpoints%>HP </font></span>
+            </div>
+
+            <div class="turn">
+            <center>
+              <br><br><br><br><br><br><br><br><br>
+                <%=@game.current_turn.name%>'s turn
+                <form action="/attack">
+                  <input type="submit" value="Attack">
+                </form>
+            </center>
+            </div>
+      </div>
+  </body>
+<html>

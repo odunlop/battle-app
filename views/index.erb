@@ -1,9 +1,35 @@
-<form action="/names" method="post">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <title> Battle! </title>
+        <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <div class="container">
+      <center>
+      <div class="menu">
+      <ul>
+        <li><i>Project developed as part of my Maker's apprenticeship</i></li>
+      </ul>
+    </div>
 
-  <label for="player_1">Player One</label>
-  <input type="text" id="player_1" name="player_one"><br>
+        <div class="app-text">
 
-  <label for="player_2">Player Two</label>
-  <input type="text" id="player_2" name="player_two"><br>
-  
-  <input type="submit" value="Submit">
+          <h1> Time to Battle! </h1></p>
+          <form action="/names" method="post">
+
+            <label for="player_1">Player One </label>
+            <input type="text" id="player_1" name="player_one"><br>
+
+            <label for="player_2">Player Two </label>
+            <input type="text" id="player_2" name="player_two"><br>
+            <br>
+            <input type="submit" value="Submit">
+
+        </div>
+      </center>
+      </div>
+  </body>
+</html>

@@ -1,8 +1,27 @@
-<% if @game.current_turn == @game.player_one %>
-<%=@game.player_one.name%> attacked <%=@game.player_two.name%>
-<% else %>
-<%=@game.player_two.name%> attacked <%=@game.player_one.name%>
-<% end %>
-<form action="/switch-turns" method="post">
-  <input type="submit" value="Proceed">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <title> Battle! </title>
+        <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+      <ul><li><font color="#0d1118";>An attack has occurred</font></h1></li></ul>
+      </div>
+        <div class="center">
+          <% if @game.current_turn == @game.player_one %>
+          <%=@game.player_one.name%> attacked <%=@game.player_two.name%><br>
+          <% else %>
+          <%=@game.player_two.name%> attacked <%=@game.player_one.name%><br>
+          <% end %>
+          <form action="/switch-turns" method="post">
+           <br> <input type="submit" value="Proceed">
+          </form>
+        </div>
+    </div>
+  </body>
+</html>
+
